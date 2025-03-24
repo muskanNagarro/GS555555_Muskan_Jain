@@ -50,4 +50,4 @@ https://github.com/muskanNagarro/GS555555_Muskan_Jain.git
 
 
 ## Website Host URL
-https://gs-555555-muskan-jain-r9ta.vercel.app/store
+https://gs-555555-muskan-jain-r9ta.vercel.app
