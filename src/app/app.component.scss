@@ -1,0 +1,82 @@
+/* app.component.scss */
+
+/* App container with flexbox for layout */
+.app-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Left sidebar navigation */
+  .left-navigation {
+    width: 250px;
+    background-color: #2c3e50; /* Dark background */
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Main content area */
+  .main-content {
+    flex-grow: 1;
+    background-color: #ecf0f1; /* Light background */
+  }
+  
+  /* Top navigation bar */
+  app-top-navigation {
+    width: 100%;
+  }
+  .top-navigation {
+    background-color: #3498db; /* Blue background */
+    padding: 2px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Content area for the screen's main content */
+  .content-area {
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+    max-width: 1200px; /* You can adjust this as per your design */
+  margin: 0 auto;
+  }
+  
+  /* Full-width for the logo inside top navigation */
+  .top-navigation .logo {
+    height: 40px;
+  }
+  
+  /* Left navigation links styling */
+  .left-navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 18px;
+    display: block;
+  }
+  
+  .left-navigation a:hover {
+    background-color: #34495e;
+  }
+  
+  /* Styling for active link */
+  .active-link {
+    background-color: #3498db;
+    font-weight: bold;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media screen and (max-width: 768px) {
+    .left-navigation {
+      width: 200px;
+    }
+  
+    .top-navigation {
+      font-size: 14px;
+    }
+  }
+   

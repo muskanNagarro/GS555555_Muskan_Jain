@@ -1,0 +1,106 @@
+.planning-container {
+  padding: 20px;
+  overflow-x: auto;
+  width: 95%;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Ag-Grid Styling */
+.ag-theme-alpine {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Improve Table Readability */
+.planning-table, .week-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Styling for Table Headers */
+.planning-table th, .week-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Styling for Table Data Cells */
+.planning-table td, .week-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Add Hover Effect for Readability */
+.planning-table tbody tr:hover, .week-table tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Input Field Styling */
+input {
+  width: 80px;
+  padding: 6px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Paragraph Spacing */
+.week-table p {
+  margin: 5px 0;
+}
+
+/* Align Content Vertically */
+td {
+  vertical-align: top;
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .planning-table th, .planning-table td, .week-table th, .week-table td {
+      padding: 6px;
+      font-size: 12px;
+  }
+
+  .week-table input {
+      width: 60px;
+  }
+
+  .planning-container {
+      width: 100%;
+      padding: 10px;
+  }
+}
+
+/* Loading Indicator Styling */
+.loading-container {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Success Message Styling */
+.performance-info {
+  margin: 10px 0;
+  font-size: 16px;
+  color: green;
+  text-align: center;
+}

@@ -1,0 +1,59 @@
+<!-- sku.component.html -->
+<div class="sku-container">
+    <h2>SKU Management</h2>
+  
+    <!-- Add SKU Form -->
+    <div class="add-sku-form">
+      <label for="skuCode">SKU ID:</label>
+      <input type="text" id="skuCode" [(ngModel)]="newSKU.id" placeholder="Enter SKU ID" />
+
+      <label for="skuCode">SKU Label:</label>
+      <input type="text" id="skuCode" [(ngModel)]="newSKU.label" placeholder="Enter SKU Label" />
+
+      <label for="skuCode">SKU Class:</label>
+      <input type="text" id="skuCode" [(ngModel)]="newSKU.class" placeholder="Enter SKU Class" />
+
+      <label for="skuCode">SKU Department:</label>
+      <input type="text" id="skuCode" [(ngModel)]="newSKU.dept" placeholder="Enter SKU Department" />
+  
+      <label for="skuPrice">Price(in $): </label>
+      <input type="number" id="skuPrice" [(ngModel)]="newSKU.price" placeholder="Enter Price" />
+  
+      <label for="skuCost">Cost(in $):</label>
+      <input type="number" id="skuCost" [(ngModel)]="newSKU.cost" placeholder="Enter Cost" />
+  
+      <button class="btn" (click)="addSKU()">Add SKU</button>
+    </div>
+  
+    <!-- SKU Table -->
+    <table class="sku-table">
+      <thead>
+        <tr>
+          <th>S.No.</th>
+          <th>ID</th>
+          <th>Label</th>
+          <th>class</th>
+          <th>Department</th>
+          <th>Price</th>
+          <th>Cost</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sku of skus; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ sku.id }}</td>
+          <td>{{ sku.label }}</td>
+          <td>{{ sku.class }}</td>
+          <td>{{ sku.dept }}</td>
+          <td>${{ sku.price}}</td>
+          <td>${{ sku.cost}}</td>
+          <td>
+            <button class="btn btn-update" (click)="updateSKU(i)">Update</button>
+            <button class="btn btn-delete" (click)="deleteSKU(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

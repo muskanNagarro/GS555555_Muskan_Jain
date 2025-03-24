@@ -1,0 +1,26 @@
+<div class="planning-container">
+  <h2>Planning Screen</h2>
+
+  <!-- Loading Indicator -->
+  <div *ngIf="isLoading" class="loading-container">
+    <p>Loading data... Please wait</p>
+  </div>
+
+  <!-- Performance Information -->
+  <div *ngIf="!isLoading && processingTime !== null" class="performance-info">
+    <p>Data processed in {{ processingTime }} seconds.</p>
+  </div>
+
+  <!-- AG Grid Table -->
+  <ag-grid-angular
+    #agGrid
+    style="width: 100%; height: 500px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [animateRows]="true"
+    [gridOptions]="gridOptions"
+    (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+</div>

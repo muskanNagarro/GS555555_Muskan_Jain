@@ -1,0 +1,48 @@
+<!-- login.component.html -->
+<div class="login-container">
+    <div class="login-form">
+      <h2>{{ isAuthenticated ? 'Welcome' : 'Login' }}</h2>
+  
+      <!-- Display error message if any -->
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+  
+      <!-- Login Form only visible when not authenticated -->
+      <form *ngIf="!isAuthenticated" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            [(ngModel)]="username"
+            name="username"
+            required
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+        </div>
+  
+        <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+          {{ isLoading ? 'Logging in...' : 'Login' }}
+        </button>
+      </form>
+  
+      <!-- Sign Out Button only visible when authenticated -->
+      <button *ngIf="isAuthenticated" class="btn btn-danger" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </div>
+  

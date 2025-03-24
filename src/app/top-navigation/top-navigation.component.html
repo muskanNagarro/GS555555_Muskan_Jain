@@ -1,0 +1,17 @@
+<!-- top-navigation.component.html -->
+<nav class="navbar">
+  
+    <div class="navbar-right">
+      <!-- If user is authenticated, show Welcome message and Logout button -->
+      <div *ngIf="isAuthenticated; else signIn">
+        <span>Welcome, {{ username }}</span>
+        <button class="btn btn-logout" (click)="logout()">Logout</button>
+      </div>
+  
+      <!-- If user is not authenticated, show Sign In button -->
+      <ng-template #signIn>
+        <button class="btn btn-login" (click)="login()">Sign In</button>
+      </ng-template>
+    </div>
+  </nav>
+  

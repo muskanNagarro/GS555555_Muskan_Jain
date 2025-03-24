@@ -1,0 +1,102 @@
+/* sku.component.scss */
+.sku-container {
+    padding: 20px;
+    background-color: #ecf0f196;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .add-sku-form {
+    margin-bottom: 20px;
+  }
+  
+  .add-sku-form label {
+    font-weight: bold;
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .add-sku-form input {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-sku-form input:focus {
+    border-color: #3498db;
+  }
+  
+  .add-sku-form button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-sku-form button:hover {
+    background-color: #1f6c9f;
+  }
+  
+  .sku-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .sku-table th, .sku-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sku-table th {
+    background-color: #2980b9;
+    color: white;
+  }
+  
+  .sku-table td {
+    background-color: #fff;
+  }
+  
+  .sku-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .sku-table .btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .sku-table .btn-update {
+    background-color: #2ecc71;
+    color: white;
+    margin-bottom: 6px;
+  }
+  
+  .sku-table .btn-update:hover {
+    background-color: #27ae60;
+  }
+  
+  .sku-table .btn-delete {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .sku-table .btn-delete:hover {
+    background-color: #c0392b;
+  }
+  
